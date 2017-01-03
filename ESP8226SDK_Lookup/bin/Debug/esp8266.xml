@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<esp8266doc>
+    <keyword name="os_timer_arm" group="soft_timer" docpath="docs\os_timer_arm.htm"></keyword>
+    <keyword name="os_timer_disarm" group="soft_timer" docpath="docs\os_timer_disarm.htm"></keyword>
+    <keyword name="os_timer_setfn" group="soft_timer"></keyword>
+    <keyword name="system_timer_reinit" group="soft_timer"></keyword>
+    <keyword name="os_timer_arm_us" group="soft_timer"></keyword>
+
+    <keyword name="hw_timer_init" group="hw_timer"></keyword>
+    <keyword name="hw_timer_arm" group="hw_timer"></keyword>
+    <keyword name="hw_timer_set_func" group="hw_timer"></keyword>
+
+    <!--System APIs-->
+    <keyword name="system_get_sdk_version" group="sys"></keyword>
+    <keyword name="system_restore" group="sys"></keyword>
+    <keyword name="system_restart" group="sys"></keyword>
+    <keyword name="system_init_done_cb" group="sys"></keyword>
+    <keyword name="system_get_chip_id" group="sys"></keyword>
+    <keyword name="system_get_vdd33" group="sys"></keyword>
+    <keyword name="system_adc_read" group="sys"></keyword>
+    <keyword name="system_deep_sleep" group="sys"></keyword>
+    <keyword name="system_deep_sleep_set_option" group="sys"></keyword>
+    <keyword name="system_phy_set_rfoption" group="sys"></keyword>
+    <keyword name="system_phy_set_max_tpw" group="sys"></keyword>
+    <keyword name="system_phy_set_tpw_via_vdd33" group="sys"></keyword>
+    <keyword name="system_set_os_print" group="sys"></keyword>
+    <keyword name="system_print_meminfo" group="sys"></keyword>
+    <keyword name="system_get_free_heap_size" group="sys"></keyword>
+    <keyword name="system_os_task" group="sys"></keyword>
+    <keyword name="system_os_post" group="sys"></keyword>
+    <keyword name="system_get_time" group="sys"></keyword>
+    <keyword name="system_get_rtc_time" group="sys"></keyword>
+    <keyword name="system_rtc_clock_cali_proc" group="sys"></keyword>
+    <keyword name="system_rtc_mem_write" group="sys"></keyword>
+    <keyword name="system_rtc_mem_read" group="sys"></keyword>
+    <keyword name="system_uart_swap" group="sys"></keyword>
+    <keyword name="system_uart_de_swap" group="sys"></keyword>
+    <keyword name="system_get_boot_version" group="sys"></keyword>
+    <keyword name="system_get_userbin_addr" group="sys"></keyword>
+    <keyword name="system_get_boot_mode" group="sys"></keyword>
+    <keyword name="system_restart_enhance" group="sys"></keyword>
+    <keyword name="system_update_cpu_freq" group="sys"></keyword>
+    <keyword name="system_get_cpu_freq" group="sys"></keyword>
+    <keyword name="system_get_flash_size_map" group="sys"></keyword>
+    <keyword name="system_get_rst_info" group="sys"></keyword>
+    <keyword name="system_soft_wdt_stop" group="sys"></keyword>
+    <keyword name="system_soft_wdt_restart" group="sys"></keyword>
+    <keyword name="system_soft_wdt_feed" group="sys"></keyword>
+    <keyword name="os_memset" group="sys"></keyword>
+    <keyword name="os_memcpy" group="sys"></keyword>
+    <keyword name="os_strlen" group="sys"></keyword>
+    <keyword name="os_printf" group="sys"></keyword>
+    <keyword name="os_bzero" group="sys"></keyword>
+    <keyword name="os_delay_us" group="sys"></keyword>
+    <keyword name="os_install_putc1" group="sys"></keyword>
+
+    <!--SPI Flash Related APIs-->
+    <keyword name="spi_flash_get_id" group="spi"></keyword>
+    <keyword name="spi_flash_erase_sector" group="spi"></keyword>
+    <keyword name="spi_flash_write" group="spi"></keyword>
+    <keyword name="spi_flash_read" group="spi"></keyword>
+    <keyword name="system_param_save_with_protect" group="spi"></keyword>
+    <keyword name="system_param_load" group="spi"></keyword>
+    <keyword name="spi_flash_set_read_func" group="spi"></keyword>
+
+    <!--Wi-Fi Related APIs-->
+    <keyword name="wifi_get_opmode" group="wifi"></keyword>
+    <keyword name="wifi_get_opmode_default" group="wifi"></keyword>
+    <keyword name="wifi_set_opmode" group="wifi"></keyword>
+    <keyword name="wifi_set_opmode_current" group="wifi"></keyword>
+    <keyword name="wifi_station_get_config" group="wifi"></keyword>
+    <keyword name="wifi_station_get_config_default" group="wifi"></keyword>
+    <keyword name="wifi_station_set_config" group="wifi"></keyword>
+    <keyword name="wifi_station_set_config_current" group="wifi"></keyword>
+    <keyword name="wifi_station_connect" group="wifi"></keyword>
+    <keyword name="wifi_station_disconnect" group="wifi"></keyword>
+
+    <keyword name="wifi_station_get_connect_status" group="wifi"></keyword>
+    <keyword name="wifi_station_scan" group="wifi"></keyword>
+    <keyword name="scan_done_cb_t" group="wifi"></keyword>
+    <keyword name="wifi_station_ap_number_set" group="wifi"></keyword>
+    <keyword name="wifi_station_get_ap_info" group="wifi"></keyword>
+    <keyword name="wifi_station_ap_change" group="wifi"></keyword>
+    <keyword name="wifi_station_get_current_ap_id" group="wifi"></keyword>
+    <keyword name="wifi_station_get_auto_connect" group="wifi"></keyword>
+    <keyword name="wifi_station_set_auto_connect" group="wifi"></keyword>
+    <keyword name="wifi_station_dhcpc_start" group="wifi"></keyword>
+
+    <keyword name="wifi_station_dhcpc_stop" group="wifi"></keyword>
+    <keyword name="wifi_station_dhcpc_status" group="wifi"></keyword>
+    <keyword name="wifi_station_set_reconnect_policy" group="wifi"></keyword>
+    <keyword name="wifi_station_get_rssi" group="wifi"></keyword>
+    <keyword name="wifi_station_set_hostname" group="wifi"></keyword>
+    <keyword name="wifi_station_get_hostname" group="wifi"></keyword>
+    <keyword name="wifi_softap_get_config" group="wifi"></keyword>
+    <keyword name="wifi_softap_get_config_default" group="wifi"></keyword>
+    <keyword name="wifi_softap_set_config" group="wifi"></keyword>
+    <keyword name="wifi_softap_set_config_current" group="wifi"></keyword>
+
+    <keyword name="wifi_softap_get_station_num" group="wifi"></keyword>
+    <keyword name="wifi_softap_get_station_info" group="wifi"></keyword>
+    <keyword name="wifi_softap_free_station_info" group="wifi"></keyword>
+    <keyword name="wifi_softap_dhcps_start" group="wifi"></keyword>
+    <keyword name="wifi_softap_dhcps_stop" group="wifi"></keyword>
+    <keyword name="wifi_softap_set_dhcps_lease" group="wifi"></keyword>
+    <keyword name="wifi_softap_get_dhcps_lease" group="wifi"></keyword>
+    <keyword name="wifi_softap_dhcps_status" group="wifi"></keyword>
+    <keyword name="wifi_softap_set_dhcps_offer_option" group="wifi"></keyword>
+    <keyword name="wifi_set_phy_mode" group="wifi"></keyword>
+
+    <keyword name="wifi_get_phy_mode" group="wifi"></keyword>
+    <keyword name="wifi_get_ip_info" group="wifi"></keyword>
+    <keyword name="wifi_set_ip_info" group="wifi"></keyword>
+    <keyword name="wifi_set_macaddr" group="wifi"></keyword>
+    <keyword name="wifi_get_macaddr" group="wifi"></keyword>
+    <keyword name="wifi_set_sleep_type" group="wifi"></keyword>
+    <keyword name="wifi_get_sleep_type" group="wifi"></keyword>
+    <keyword name="wifi_status_led_install" group="wifi"></keyword>
+    <keyword name="wifi_status_led_uninstall" group="wifi"></keyword>
+    <keyword name="wifi_set_broadcast_if" group="wifi"></keyword>
+
+    <keyword name="wifi_get_broadcast _if" group="wifi"></keyword>
+    <keyword name="wifi_set_event_handler_cb" group="wifi"></keyword>
+    <keyword name="wifi_get_channel" group="wifi"></keyword>
+    <keyword name="wifi_set_channel" group="wifi"></keyword>
+    <keyword name="wifi_wps_enable" group="wifi"></keyword>
+    <keyword name="wifi_wps_disable" group="wifi"></keyword>
+    <keyword name="wifi_wps_start" group="wifi"></keyword>
+    <keyword name="wifi_set_wps_cb" group="wifi"></keyword>
+
+    <!--GPIO-->
+    <keyword name="pin" group="gpio"></keyword>
+    <keyword name="gpio_output_set" group="gpio"></keyword>
+    <keyword name="gpio input and output macro" group="gpio"></keyword>
+    <keyword name="gpio interrupt" group="gpio"></keyword>
+    <keyword name="gpio_pin_intr_state_set" group="gpio"></keyword>
+    <keyword name="gpio interrupt handler" group="gpio"></keyword>
+
+    <groups>
+        <group>soft_timer</group>
+        <group>hw_timer</group>
+        <group>sys</group>
+        <group>spi</group>
+        <group>wifi</group>
+        <group>gpio</group>
+    </groups>
+</esp8266doc>

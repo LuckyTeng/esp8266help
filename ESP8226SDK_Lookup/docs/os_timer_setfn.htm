@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+    <head>
+        
+        <style type="text/css">
+            body {
+                font-size: 70%;
+            }
+            
+            h1
+            {
+                color: #FF0000;
+            }
+            
+            em {
+                font-size: large;
+                font-weight: bold;
+            }
+            
+            strong {
+                color: Blue;
+            }
+        </style>
+        
+    </head>
+
+<body>
+    <div>
+        <h1>os_timer_setfn</h1>
+        <pre>
+<em>Function:</em>
+    Set timer callback function.
+    
+    For enabled timer, timer callback has to be set.
+
+<em>Prototype:</em>
+    <strong>void os_timer_setfn(
+        os_timer_t *ptimer,
+        os_timer_func_t *pfunction,
+        void *parg
+        )</strong>
+
+<em>Parameters:</em>
+    <strong>os_timer_t *ptimer</strong> : Timer structure
+    <strong>os_timer_func_t *pfunction</strong> : timer callback function
+    <strong>void *parg</strong> : callback function parameter
+
+<em>Return:</em>
+null
+        </pre>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+    <head>
+        
+        <style type="text/css">
+            body {
+                font-size: 70%;
+            }
+            
+            h1
+            {
+                color: #FF0000;
+            }
+            
+            em {
+                font-size: large;
+                font-weight: bold;
+            }
+            
+            strong {
+                color: Blue;
+            }
+        </style>
+        
+    </head>
+
+<body>
+    <div>
+        <h1>os_timer_arm</h1>
+        <pre>
+<em>Function:</em>
+    Enable a millisecond timer.
+
+<em>Prototype:</em>
+    <strong>os_timer_arm (
+        os_timer_t *ptimer,
+        uint32_t milliseconds,
+        bool repeat_flag
+    )</strong>
+
+<em>Parameters:</em>
+    <strong>os_timer_t *ptimer</strong> : Timer structure
+    <strong>uint32_t milliseconds</strong> : Timing, Unit: millisecond
+
+        ‣ if called <strong>system_timer_reinit</strong>, the maximum value allowed to input is 0x41893
+
+        ‣ if didn’t call <strong>system_timer_reinit</strong>, the maximum value allowed to input is 0xFFFFFFF
+
+    <strong>bool repeat_flag</strong> : Whether the timer will be invoked repeatedly or not
+
+<em>Return:</em>
+null
+        </pre>
+    </div>
+
+</body>
+
+</html>

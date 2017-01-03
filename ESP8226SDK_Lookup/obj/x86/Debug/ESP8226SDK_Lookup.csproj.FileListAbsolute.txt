@@ -1,0 +1,13 @@
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\ESP8226SDK_Lookup.exe
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\ESP8226SDK_Lookup.pdb
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\obj\x86\Debug\ESP8226SDK_Lookup.Form1.resources
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\obj\x86\Debug\ESP8226SDK_Lookup.Properties.Resources.resources
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\obj\x86\Debug\ESP8226SDK_Lookup.csproj.GenerateResource.Cache
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\obj\x86\Debug\ESP8226SDK_Lookup.exe
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\obj\x86\Debug\ESP8226SDK_Lookup.pdb
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\esp8266.xml
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\os_timer_arm.htm
+c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\os_timer_disarm.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\obj\x86\Debug\ESP8226SDK_Lookup.csprojResolveAssemblyReference.cache
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\os_timer_setfn.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\pin.htm
