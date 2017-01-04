@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+    <head>
+        <title>ESP8266 Help</title>
+        <style type="text/css">
+        body {
+            font-size: 70%;
+        }
+            
+        h1
+        {
+            color: #FF0000;
+        }
+            
+        em, i {
+            font-size: large;
+            font-weight: bold;
+        }
+            
+        strong, b {
+            color: Blue;
+        }
+    </style>
+    </head>
+    <body>
+        <div>
+            <h1>GPIO input and output macro</h1>
+            <pre>
+<em>Function:</em>
+    set gpio property
+
+    <b>GPIO_OUTPUT_SET(gpio_no, bit_value)</b>
+        Set gpio_no as output bit_value, the same as the output example in 5.1.2
+    <b>GPIO_DIS_OUTPUT(gpio_no)</b>
+        Set gpio_no as input, the same as the input example in 5.1.2.
+    <b>GPIO_INPUT_GET(gpio_no)</b>
+        Get the level status of gpio_no.
+    
+<i>Include:</i>
+    gpio.c
+    
+<i>Example:</i>
+    <b>GPIO_OUTPUT_SET(14,1):</b>
+        Set GPIO14 as high-level output;
+    <b>GPIO_OUTPUT_SET(14,0):</b>
+        Set GPIO14 as low-level output
+    <b>GPIO_DIS_OUTPUT(14):</b>
+        Disable GPIO12 output, it means that set the GPIO12 as input
+    <b>GPIO_INPUT_GET(14):</b>
+        read GPIO14's value
+</pre>
+        </div>
+    </body>
+</html>

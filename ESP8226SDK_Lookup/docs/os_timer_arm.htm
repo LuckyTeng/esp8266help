@@ -2,47 +2,41 @@
 
 <html>
     <head>
-        
+        <title>ESP8266 Help</title>
         <style type="text/css">
-            body {
-                font-size: 70%;
-            }
+        body {
+            font-size: 70%;
+        }
             
-            h1
-            {
-                color: #FF0000;
-            }
+        h1
+        {
+            color: #FF0000;
+        }
             
-            em {
-                font-size: large;
-                font-weight: bold;
-            }
+        em, i {
+            font-size: large;
+            font-weight: bold;
+        }
             
-            strong {
-                color: Blue;
-            }
-        </style>
-        
+        strong, b {
+            color: Blue;
+        }
+    </style>
     </head>
-
-<body>
-    <div>
-        <h1>os_timer_arm</h1>
-        <pre>
+    <body>
+        <div>
+            <h1>os_timer_arm</h1>
+            <pre>
 <em>Function:</em>
     Enable a millisecond timer.
 
 <em>Prototype:</em>
-    <strong>os_timer_arm (
-        os_timer_t *ptimer,
-        uint32_t milliseconds,
-        bool repeat_flag
-    )</strong>
+    <strong>os_timer_arm ( os_timer_t *ptimer, uint32_t milliseconds, bool repeat_flag )</strong>
 
 <em>Parameters:</em>
-    <strong>os_timer_t *ptimer</strong> : Timer structure
-    <strong>uint32_t milliseconds</strong> : Timing, Unit: millisecond
-
+    <b>os_timer_t *ptimer</b> : Timer structure
+    <b>uint32_t milliseconds</b> : Timing, Unit: millisecond
+    
         ‣ if called <strong>system_timer_reinit</strong>, the maximum value allowed to input is 0x41893
 
         ‣ if didn’t call <strong>system_timer_reinit</strong>, the maximum value allowed to input is 0xFFFFFFF
@@ -50,10 +44,15 @@
     <strong>bool repeat_flag</strong> : Whether the timer will be invoked repeatedly or not
 
 <em>Return:</em>
-null
-        </pre>
-    </div>
+    null
 
-</body>
-
+<i>Include:</i>
+    osapi.h
+    
+<i>Remark:</i>
+• For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked repeatedly. <b>os_timer_disarm</b> should be invoked first.
+• <b>os_timer_setfn</b> can only be invoked when the timer is not enabled,
+</pre>
+        </div>
+    </body>
 </html>

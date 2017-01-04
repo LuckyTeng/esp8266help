@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+    <head>
+        <title>ESP8266 Help</title>
+        <style type="text/css">
+        body {
+            font-size: 70%;
+        }
+            
+        h1
+        {
+            color: #FF0000;
+        }
+            
+        em, i {
+            font-size: large;
+            font-weight: bold;
+        }
+            
+        strong, b {
+            color: Blue;
+        }
+    </style>
+    </head>
+    <body>
+        <div>
+            <h1>gpio_output_set</h1>
+            <pre>
+<em>Function:</em>
+    set gpio property
+
+<em>Prototype:</em>
+    <strong>void gpio_output_set(
+        uint32 set_mask,
+        uint32 clear_mask,
+        uint32 enable_mask,
+        uint32 disable_mask
+        )</strong>
+
+<em>Input Parameters:</em>
+    <b>uint32 set_mask</b> : set high output; 1:high output; 0:no status change
+    <b>uint32 clear_mask</b> : set low output; 1:low output; 0:no status change
+    <b>uint32 enable_mask</b> : enable outpout bit
+    <b>uint32 disable_mask</b> : enable input bit
+
+<em>Return:</em>
+    null
+
+<i>Include:</i>
+    gpio.c
+    
+<i>Example:</i>
+    <b>gpio_output_set(BIT12, 0, BIT12, 0):</b>
+        Set GPIO12 as high-level output;
+    <b>gpio_output_set(0, BIT12, BIT12, 0):</b>
+        Set GPIO12 as low-level output
+    <b>gpio_output_set(BIT12, BIT13, BIT12|BIT13, 0):</b>
+        Set GPIO12 as high-level output, GPIO13 as low-level output.
+    <b>gpio_output_set(0, 0, 0, BIT12):</b>
+        Set GPIO12 as input
+</pre>
+        </div>
+    </body>
+</html>

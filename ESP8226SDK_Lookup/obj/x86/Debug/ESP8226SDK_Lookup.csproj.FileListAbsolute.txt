@@ -11,3 +11,8 @@ c:\users\teng\documents\visual studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK
 C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\obj\x86\Debug\ESP8226SDK_Lookup.csprojResolveAssemblyReference.cache
 C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\os_timer_setfn.htm
 C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\pin.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\gpio_output_set.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\gpio input and output macro.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\gpio interrupt handler.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\gpio interrupt.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\gpio_pin_intr_state_set.htm
