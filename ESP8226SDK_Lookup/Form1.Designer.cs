@@ -60,7 +60,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.webBrowser1);
-            this.splitContainer1.Size = new System.Drawing.Size(765, 462);
+            this.splitContainer1.Size = new System.Drawing.Size(911, 632);
             this.splitContainer1.SplitterDistance = 255;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -70,7 +70,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 103);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 359);
+            this.panel2.Size = new System.Drawing.Size(255, 529);
             this.panel2.TabIndex = 2;
             // 
             // lbKey
@@ -82,7 +82,7 @@
             this.lbKey.ItemHeight = 12;
             this.lbKey.Location = new System.Drawing.Point(12, 6);
             this.lbKey.Name = "lbKey";
-            this.lbKey.Size = new System.Drawing.Size(227, 340);
+            this.lbKey.Size = new System.Drawing.Size(227, 508);
             this.lbKey.TabIndex = 3;
             this.lbKey.SelectedIndexChanged += new System.EventHandler(this.lbKey_SelectedIndexChanged);
             // 
@@ -140,7 +140,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(506, 462);
+            this.webBrowser1.Size = new System.Drawing.Size(652, 632);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
             // 
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 462);
+            this.ClientSize = new System.Drawing.Size(911, 632);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "ESP8266 SDK Quick Help";
