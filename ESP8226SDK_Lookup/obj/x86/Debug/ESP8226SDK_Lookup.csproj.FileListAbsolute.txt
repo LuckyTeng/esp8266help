@@ -25,3 +25,5 @@ C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK
 C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_restart.htm
 C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_restore.htm
 C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\template.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\os_timer_arm_us.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_timer_reinit.htm
