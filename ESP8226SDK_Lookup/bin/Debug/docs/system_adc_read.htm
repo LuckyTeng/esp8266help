@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+    <head>
+        <title>ESP8266 Help</title>
+        <style type="text/css">
+        body {
+            font-size: 70%;
+        }
+            
+        h1
+        {
+            color: #FF0000;
+        }
+            
+        em, i {
+            font-size: large;
+            font-weight: bold;
+        }
+            
+        strong, b {
+            color: Blue;
+        }
+    </style>
+    </head>
+
+<body>
+<h1>system_adc_read</h1>
+            <pre>
+<em>Function:</em>
+    Measure the input voltage of TOUT pin 6, unit：1/1024 V
+    
+<em>Note:</em>
+• <b>system_adc_read</b> is only available when wire TOUT pin to external
+circuitry. Input Voltage Range restricted to 0 ~ 1.0V.
+
+• The 107th byte in esp_init_data_default.bin(0〜～127byte) is named as
+“vdd33_const”, and when wire TOUT pin to external circuitry, the
+vdd33_const must be set as real power voltage of VDD3P3 pin 3 and 4.
+
+• The range of operating voltage of ESP8266 is 1.8V~3.6V，the unit of
+vdd33_const is 0.1V，so effective value range of vdd33_const is [18,
+36]. If vdd33_const is an ineffective value which in [0, 18) or (36,
+255), ESP8266 RF calibration will use 3.3V by default.
+<em>Prototype:</em>
+    <strong>uint16 system_adc_read(void)</strong>
+
+<em>Parameters:</em>
+    none
+    
+<em>Return:</em>
+    input voltage of TOUT pin 6, unit：1/1024 V
+   
+
+<i>Include:</i>
+    osapi.h
+    
+</pre>
+</body>
+
+</html>

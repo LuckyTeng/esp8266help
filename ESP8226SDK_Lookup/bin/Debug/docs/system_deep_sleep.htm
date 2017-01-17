@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+    <head>
+        <title>ESP8266 Help</title>
+        <style type="text/css">
+        body {
+            font-size: 70%;
+        }
+            
+        h1
+        {
+            color: #FF0000;
+        }
+            
+        em, i {
+            font-size: large;
+            font-weight: bold;
+        }
+            
+        strong, b {
+            color: Blue;
+        }
+            .style1
+            {
+                color: #990000;
+            }
+    </style>
+    </head>
+
+<body>
+<h1>system_deep_sleep</h1>
+            <pre>
+<em>Function:</em>
+    Configures chip for deep-sleep mode. When the device is in deep-sleep, it
+automatically wakes up periodically; the period is configurable. Upon waking
+up, the device boots up from<b> user_init</b>.
+
+<em>Note:</em>
+    • Hardware has to support deep-sleep wake up (<b>XPD_DCDC</b> connects to <b>EXT_RSTB</b> with 0R).
+    • <strong>system_deep_sleep(0):</strong> there is no wake up timer; in order to wakeup, connect a GPIO 
+        to pin <strong>RST</strong>, the chip will wake up by a falling-edge on pin <strong>RST</strong>.
+    • How to short the time it takes to wake up from deep-sleep, please refer to documentation 
+        “2A-ESP8266__IOT_SDK_User_Manual” chapter <span class="style1">Appendix</span>.
+pin RST.
+<em>Prototype:</em>
+    <strong>void os_timer_disarm (os_timer_t *ptimer)</strong>
+
+<em>Parameters:</em>
+    <b>uint32 time_in_us</b> : during the time (us) device is in deep-sleep
+    
+<em>Return:</em>
+    null
+    
+<i>Include:</i>
+    osapi.h
+
+</pre>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+    <head>
+        <title>ESP8266 Help</title>
+        <style type="text/css">
+        body {
+            font-size: 70%;
+        }
+            
+        h1
+        {
+            color: #FF0000;
+        }
+            
+        em, i {
+            font-size: large;
+            font-weight: bold;
+        }
+            
+        strong, b {
+            color: Blue;
+        }
+    </style>
+    </head>
+
+<body>
+<h1>os_timer_arm_us</h1>
+            <pre>
+<em>Function:</em>
+    Enable a microsecond timer.
+    
+<i>Note:</i>
+    1. Define <b>USE_US_TIMER</b>;
+    2. Put <b>system_timer_reinit</b> at the beginning of <b>user_init</b> , in the first
+    sentence.
+
+<em>Prototype:</em>
+    <b>void os_timer_arm_us (
+        os_timer_t *ptimer,
+        uint32_t microseconds,
+        bool repeat_flag
+        )</b>
+
+<em>Parameters:</em>
+    <b>os_timer_t *ptimer</b> : Timer structure
+    <b>uint32_t microseconds </b>: Timing, Unit: microsecond, the minimum value is
+    0x64, the maximum value allowed to input is 0xFFFFFFF
+    <b>bool repeat_flag</b> : Whether the timer will be invoked repeatedly or not
+    
+<em>Return:</em>
+    null
+    
+
+<i>Include:</i>
+    osapi.h
+
+<i>Example:</i>
+    <b>os_timer_arm_us( &os_timer, 100, true)</b>
+</pre>
+</body>
+
+</html>

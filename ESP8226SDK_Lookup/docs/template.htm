@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <title>ESP8266 Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body
+        {
+            font-size: 95%;
+        }
+        
+        h1
+        {
+            color: #FF0000;
+        }
+        
+        h2
+        {
+            font-size: large;
+            font-weight: bold;
+        }
+        
+        strong, b
+        {
+            color: Blue;
+        }
+        
+        p
+        {
+            margin-left: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%">
+        <h1>
+            function_name</h1>
+        <h2>
+            Function:</h2>
+        <p>
+            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
+            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
+            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+        <h2>
+            Prototype:</h2>
+        <pre>
+    <strong>void system_restore(void)</strong>
+</pre>
+        <h2>
+            Parameters:</h2>
+        <p>
+            null</p>
+        <h2>
+            Return:</h2>
+        <p>
+            null</p>
+        <h2>
+            Include:</h2>
+        <p>
+            osapi.h</p>
+        <h2>
+            Remark:</h2>
+        <p>
+            <ol>
+                <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be
+            invoked repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
+                <li><b>os_timer_setfn</b>
+            can only be invoked when the timer is not enabled,</li>
+            </ol>
+            
+        </p>
+        <h2>
+            Example:</h2>
+        <p>
+            <b>This is a example.</b></p>
+    </div>
+</body>
+</html>

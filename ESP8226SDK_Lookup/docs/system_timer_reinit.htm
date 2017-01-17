@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+    <head>
+        <title>ESP8266 Help</title>
+        <style type="text/css">
+        body {
+            font-size: 70%;
+        }
+            
+        h1
+        {
+            color: #FF0000;
+        }
+            
+        em, i {
+            font-size: large;
+            font-weight: bold;
+        }
+            
+        strong, b {
+            color: Blue;
+        }
+    </style>
+    </head>
+
+<body>
+<h1>system_timer_reinit</h1>
+            <pre>
+<em>Function:</em>
+    Reinitiate the timer when you need to use microsecond timer
+    
+<i>Note:</i>
+    1. Define <b>USE_US_TIMER</b>;
+    2. Put <b>system_timer_reinit</b> at the beginning of <b>user_init</b> , in the first
+    sentence.
+
+<em>Prototype:</em>
+    <strong>void system_timer_reinit (void)</strong>
+
+<i>Include:</i>
+    osapi.h
+    
+
+
+
+</pre>
+</body>
+
+</html>

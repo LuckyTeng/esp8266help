@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+    <head>
+        <title>ESP8266 Help</title>
+        <style type="text/css">
+        body {
+            font-size: 70%;
+        }
+            
+        h1
+        {
+            color: #FF0000;
+        }
+            
+        em, i {
+            font-size: large;
+            font-weight: bold;
+        }
+            
+        strong, b {
+            color: Blue;
+        }
+    </style>
+    </head>
+
+<body>
+<h1>system_init_done_cb</h1>
+            <pre>
+<em>Function:</em>
+    Call this API in <b>user_init</b> to register a system-init-done callback.
+
+<em>Prototype:</em>
+    <strong>void system_init_done_cb(init_done_cb_t cb)</strong>
+
+<em>Parameters:</em>
+    <b>init_done_cb_t cb</b> : system-init-done callback
+
+    <strong>bool repeat_flag</strong> : Whether the timer will be invoked repeatedly or not
+    
+<em>Return:</em>
+    null
+    
+<em>Note:</em>
+    <b>wifi_station_scan</b> has to be called after system init done and station enable.
+
+<i>Include:</i>
+    osapi.h
+    
+<i>Remark:</i>
+• For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked repeatedly. <b>os_timer_disarm</b> should be invoked first.
+• <b>os_timer_setfn</b> can only be invoked when the timer is not enabled,
+
+<i>Example:</i>
+    <b>void to_scan(void) { wifi_station_scan(NULL,scan_done); }
+    void user_init(void) {
+        wifi_set_opmode(STATION_MODE);
+        system_init_done_cb(to_scan);
+    }</b>
+</pre>
+</body>
+
+</html>
