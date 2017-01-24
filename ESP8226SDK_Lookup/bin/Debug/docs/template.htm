@@ -29,6 +29,12 @@
         {
             margin-left: 2em;
         }
+        
+        li
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -53,22 +59,18 @@
         <h2>
             Return:</h2>
         <p>
-            null</p>
+            none</p>
         <h2>
             Include:</h2>
         <p>
             osapi.h</p>
         <h2>
             Remark:</h2>
-        <p>
-            <ol>
-                <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be
-            invoked repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
-                <li><b>os_timer_setfn</b>
-            can only be invoked when the timer is not enabled,</li>
-            </ol>
-            
-        </p>
+        <ul>
+            <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked
+                repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
+            <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
+        </ul>
         <h2>
             Example:</h2>
         <p>

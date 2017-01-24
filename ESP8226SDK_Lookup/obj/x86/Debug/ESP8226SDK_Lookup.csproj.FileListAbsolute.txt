@@ -27,3 +27,10 @@ C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK
 C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\template.htm
 C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\os_timer_arm_us.htm
 C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_timer_reinit.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_deep_sleep_set_option.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_get_free_heap_size.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_phy_set_max_tpw.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_phy_set_rfoption.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_phy_set_tpw_via_vdd33.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_print_meminfo.htm
+C:\Users\teng\Documents\Visual Studio 2010\Projects\ESP8226SDK_Lookup\ESP8226SDK_Lookup\bin\Debug\docs\system_set_os_print.htm
