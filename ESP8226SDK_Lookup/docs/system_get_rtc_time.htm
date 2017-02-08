@@ -34,24 +34,21 @@
         {
             margin-top: 10px;
             margin-bottom: 10px;
-            list-style-type: none;
         }
     </style>
 </head>
 <body>
     <div style="width: 100%">
         <h1>
-            function_name</h1>
+            system_get_rtc_time</h1>
         <h2>
             Function:</h2>
         <p>
-            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
-            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
-            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+            Get RTC time, as denoted by the number of RTC clock periods.</p>
         <h2>
             Prototype:</h2>
         <pre>
-    <strong>void system_restore(void)</strong>
+    <strong>uint32 system_get_rtc_time(void)</strong>
 </pre>
         <h2>
             Parameters:</h2>
@@ -60,22 +57,30 @@
         <h2>
             Return:</h2>
         <p>
-            none</p>
+            RTC time</p>
         <h2>
             Include:</h2>
         <p>
             osapi.h</p>
         <h2>
-            Remark:</h2>
-        <ul>
-            <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked
-                repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
-            <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
-        </ul>
-        <h2>
             Example:</h2>
         <p>
-            <b>This is a example.</b></p>
+            If <b>system_get_rtc_time</b> returns 10 (it means 10 RTC cycles), and
+            <b>system_rtc_clock_cali_proc</b> returns 5.75 (means 5.75us per RTC cycle), then
+            the real time is 10 x 5.75 = 57.5 us.</p>
+        <h2>Note:</h2>
+        <p>
+            System time will return to zero because of <b>system_restart</b>, but RTC still
+            goes on.
+        </p>
+        <ul>
+            <li>reset by pin <b>EXT_RST</b> : RTC memory won’t change, RTC timer returns to zero</li>
+            <li>watchdog reset : RTC memory won’t change, RTC timer won’t change</li>
+            <li><b>system_restart</b> : RTC memory won’t change, RTC timer won’t change</li>
+            <li>power on : RTC memory is random value, RTC timer starts from zero</li>
+            <li>reset by pin<b> CHIP_EN</b> : RTC memory is random value, RTC timer starts from
+zero</li>
+        </ul>
     </div>
 </body>
 </html>

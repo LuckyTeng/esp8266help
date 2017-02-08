@@ -25,25 +25,30 @@
             color: Blue;
         }
         
-        p {
+        p
+        {
             margin-left: 2em;
+        }
+        
+        li
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div style="width: 100%">
         <h1>
-            system_restore</h1>
+            system_get_time</h1>
         <h2>
             Function:</h2>
         <p>
-            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
-            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
-            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+            Get system time (us).</p>
         <h2>
             Prototype:</h2>
         <pre>
-    <strong>void system_restore(void)</strong>
+    <strong>uint32 system_get_time(void)</strong>
 </pre>
         <h2>
             Parameters:</h2>
@@ -52,7 +57,7 @@
         <h2>
             Return:</h2>
         <p>
-            null</p>
+            System time in microsecond.</p>
         <h2>
             Include:</h2>
         <p>

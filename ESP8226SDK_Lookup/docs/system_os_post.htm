@@ -41,41 +41,51 @@
 <body>
     <div style="width: 100%">
         <h1>
-            function_name</h1>
+            system_os_post</h1>
         <h2>
             Function:</h2>
         <p>
-            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
-            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
-            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+            send message to task</p>
         <h2>
             Prototype:</h2>
         <pre>
-    <strong>void system_restore(void)</strong>
+    <strong>bool system_os_post (
+    uint8 prio,
+    os_signal_t sig,
+    os_param_t par
+    )</strong>
 </pre>
         <h2>
             Parameters:</h2>
-        <p>
-            null</p>
+        <ul>
+            <li>
+                <b>uint8 prio</b> : task priority, corresponding to that you set up
+            </li>
+            <li>
+                <b>os_signal_t sig</b> : message type
+            </li>
+            <li>
+                <b>os_param_t par</b> : message parameters
+            </li>
+        </ul>
         <h2>
             Return:</h2>
-        <p>
-            none</p>
+        <ul>
+            <li>true: succeed</li>
+            <li>false: fail</li>
+        </ul>
         <h2>
             Include:</h2>
         <p>
             osapi.h</p>
         <h2>
-            Remark:</h2>
-        <ul>
-            <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked
-                repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
-            <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
-        </ul>
-        <h2>
             Example:</h2>
-        <p>
-            <b>This is a example.</b></p>
+        <pre><b>Referring to the above example:</b>
+void task_post(void) {
+    system_os_post(USER_TASK_PRIO_0, SIG_RX, ‘a’);
+    }
+<b>Printout:</b>
+sig_rx a</pre>
     </div>
 </body>
 </html>

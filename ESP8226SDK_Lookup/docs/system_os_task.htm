@@ -34,47 +34,67 @@
         {
             margin-top: 10px;
             margin-bottom: 10px;
+            list-style-type: none;
         }
     </style>
 </head>
 <body>
     <div style="width: 100%">
         <h1>
-            function_name</h1>
+            system_os_task</h1>
         <h2>
             Function:</h2>
         <p>
-            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
-            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
-            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+            Set up tasks</p>
         <h2>
             Prototype:</h2>
         <pre>
-    <strong>void system_restore(void)</strong>
+    <strong>bool system_os_task(
+    os_task_t task,
+    uint8 prio,
+    os_event_t *queue,
+    uint8 qlen
+)</strong>
 </pre>
         <h2>
             Parameters:</h2>
-        <p>
-            null</p>
+        <pre>
+    <b>os_task_t task</b> : task function
+    <b>uint8 prio</b> : task priority. 3 priorities are supported: 0/1/2; 0 is the
+    lowest priority. This means only 3 tasks is allowed to set up.
+    <b>os_event_t *queue</b> : message queue pointer
+    <b>uint8 qlen</b> : message queue depth
+</pre>
         <h2>
             Return:</h2>
-        <p>
-            none</p>
+        <ul>
+            <li>true: succeed</li>
+            <li>false: fail</li>
+        </ul>
         <h2>
             Include:</h2>
         <p>
             osapi.h</p>
         <h2>
-            Remark:</h2>
-        <ul>
-            <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked
-                repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
-            <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
-        </ul>
-        <h2>
             Example:</h2>
-        <p>
-            <b>This is a example.</b></p>
+        <pre>
+    <b>#define SIG_RX 0
+    #define TEST_QUEUE_LEN 4
+    os_event_t *testQueue;
+    void test_task (os_event_t *e) {
+        switch (e->sig) {
+            case SIG_RX:
+            os_printf(sig_rx %c/n, (char)e->par);
+            break;
+            default:
+            break;
+        }
+    }
+    void task_init(void) {
+        testQueue=(os_event_t *)os_malloc(sizeof(os_event_t)*TEST_QUEUE_LEN);
+        system_os_task(test_task,USER_TASK_PRIO_0,testQueue,TEST_QUEUE_LEN);
+    }</b>
+</pre>
     </div>
 </body>
 </html>
