@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <esp8266doc>
-    <keyword name="os_timer_arm" group="soft_timer" docpath="docs\os_timer_arm.htm"></keyword>
-    <keyword name="os_timer_disarm" group="soft_timer" docpath="docs\os_timer_disarm.htm"></keyword>
+    <keyword name="os_timer_arm" group="soft_timer" docpath="docs\soft_timer\os_timer_arm.htm"></keyword>
+    <keyword name="os_timer_disarm" group="soft_timer" docpath="docs\soft_timer\os_timer_disarm.htm"></keyword>
     <keyword name="os_timer_setfn" group="soft_timer"></keyword>
     <keyword name="system_timer_reinit" group="soft_timer"></keyword>
     <keyword name="os_timer_arm_us" group="soft_timer"></keyword>

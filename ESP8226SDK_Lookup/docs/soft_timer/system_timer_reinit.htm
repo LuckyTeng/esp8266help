@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <title>ESP8266 Help</title>
+    <link rel="Stylesheet" href="../../Content/esphelp.css" />
+    <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            system_timer_reinit</h1>
+        <pre>
+<em>Function:</em>
+    Reinitiate the timer when you need to use microsecond timer
+    
+<i>Note:</i>
+    1. Define <b>USE_US_TIMER</b>;
+    2. Put <b>system_timer_reinit</b> at the beginning of <b>user_init</b> , in the first
+    sentence.
+
+<em>Prototype:</em>
+    <strong>void system_timer_reinit (void)</strong>
+
+<i>Include:</i>
+        osapi.h
+    
+    </pre>
+    </div>
+</body>
+</html>

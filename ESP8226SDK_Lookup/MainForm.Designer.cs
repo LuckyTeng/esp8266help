@@ -1,6 +1,6 @@
 ﻿namespace ESP8226SDK_Lookup
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -144,13 +144,13 @@
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 632);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "ESP8266 SDK Quick Help";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

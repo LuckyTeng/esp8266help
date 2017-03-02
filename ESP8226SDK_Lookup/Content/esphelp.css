@@ -1,0 +1,20 @@
+﻿body
+{
+    font-size: 70%;
+}
+
+h1
+{
+    color: #FF0000;
+}
+
+em, i
+{
+    font-size: large;
+    font-weight: bold;
+}
+
+strong, b
+{
+    color: Blue;
+}

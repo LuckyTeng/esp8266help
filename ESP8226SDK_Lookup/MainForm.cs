@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
+using System.Diagnostics;       // Debug
+using System.IO;                // Path
 using System.Linq;
-using System.Text;
-using System.Xml;
 using System.Xml.Linq;
 
 using System.Windows.Forms;
 
 namespace ESP8226SDK_Lookup
 {
-    public partial class Form1 :Form
+    public partial class MainForm :Form
     {
-        private const string DOC_PATH = "docpath";
+        private const string ATTR_DOC_PATH = "docpath";
+        private const string ATTR_GROUP = "group";
+        private const string ATTR_NAME = "name";
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
@@ -86,24 +83,64 @@ namespace ESP8226SDK_Lookup
 
             if (result != null)
             {
-                var xAttribute = result.Attribute(DOC_PATH);
+                var xDocPath = result.Attribute(ATTR_DOC_PATH);
+                var xGroup = result.Attribute(ATTR_GROUP);
+                var xName = result.Attribute(ATTR_NAME);
 
-                string message;
-                if (xAttribute == null)
-                {
-                    // we try to use name to get file
-                    xAttribute  = result.Attribute("name");
-                    if (xAttribute == null) return;
+                var docfullpath = PathResolver( xDocPath, xGroup, xName);
+                Debug.WriteLine(String.Format("the path is {0}", docfullpath));
 
-                    message = "docs\\" + xAttribute.Value + ".htm";
-                }
-                else
-                    message = xAttribute.Value;
-                var docfullpath = "file://" + System.IO.Directory.GetCurrentDirectory() + "\\" + message;
-                Debug.WriteLine(docfullpath);
-
+                if (docfullpath == String.Empty)
+                    docfullpath = "about:blank";        // should we change to error.htm?
                 webBrowser1.Url = new Uri(docfullpath);
             }
+        }
+
+        /// <summary>
+        /// Return the physical file address 
+        /// </summary>
+        /// <remarks>
+        /// The return path is determined by follow sequence
+        /// 1. the docpath
+        /// 2. the path docs/[name]
+        /// 3. the path docs/[group]/[name]
+        /// </remarks>
+        private string PathResolver(XAttribute xDocPath, XAttribute xGroup, XAttribute xName)
+        {
+            string relePath = String.Empty;
+            bool bSearched = false;
+
+            // if we have doc?
+            if (xDocPath != null)
+            {
+                relePath = xDocPath.Value;
+                bSearched = File.Exists(System.IO.Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + relePath);
+            }
+
+            if (!bSearched)
+            {
+                if (xName != null && xGroup == null)
+                {
+                    relePath = "docs" + Path.PathSeparator + xName.Value + ".htm";
+                    bSearched = File.Exists(System.IO.Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + relePath);
+                }
+            }
+
+            if (!bSearched)
+            {
+                if (xName != null && xGroup != null)
+                {
+                    relePath = "docs" + Path.DirectorySeparatorChar + xGroup.Value + Path.DirectorySeparatorChar + xName.Value + ".htm";
+                    bSearched = File.Exists(System.IO.Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + relePath);
+                }
+            }
+
+
+
+            if (bSearched)
+                return "file://" + System.IO.Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + relePath;
+
+            return String.Empty;
         }
 
         private void lbKey_SelectedIndexChanged(object sender, EventArgs e)

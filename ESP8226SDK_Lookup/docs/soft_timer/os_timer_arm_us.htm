@@ -1,32 +1,17 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
 <html>
-    <head>
-        <title>ESP8266 Help</title>
-        <style type="text/css">
-        body {
-            font-size: 70%;
-        }
-            
-        h1
-        {
-            color: #FF0000;
-        }
-            
-        em, i {
-            font-size: large;
-            font-weight: bold;
-        }
-            
-        strong, b {
-            color: Blue;
-        }
-    </style>
-    </head>
-
-<body>
-<h1>os_timer_arm_us</h1>
-            <pre>
+<head>
+    <title>ESP8266 Help</title>
+    <link rel="Stylesheet" href="../../Content/esphelp.css" />
+    <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+</head>
+    <body>
+        <div class="container">   
+        <h1>
+            os_timer_arm_us</h1>
+        <pre>
 <em>Function:</em>
     Enable a microsecond timer.
     
@@ -36,10 +21,7 @@
     sentence.
 
 <em>Prototype:</em>
-    <b>void os_timer_arm_us (
-        os_timer_t *ptimer,
-        uint32_t microseconds,
-        bool repeat_flag
+    <b>void os_timer_arm_us ( os_timer_t *ptimer, uint32_t microseconds, bool repeat_flag
         )</b>
 
 <em>Parameters:</em>
@@ -57,7 +39,6 @@
 
 <i>Example:</i>
     <b>os_timer_arm_us( &os_timer, 100, true)</b>
-</pre>
-</body>
-
+</pre></div>
+    </body>
 </html>
