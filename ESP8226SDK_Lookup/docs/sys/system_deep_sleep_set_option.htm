@@ -3,33 +3,10 @@
 <head>
     <title>ESP8266 Help</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style type="text/css">
-        body
-        {
-            font-size: 95%;
-        }
-        
-        h1
-        {
-            color: #FF0000;
-        }
-        
-        h2
-        {
-            font-size: large;
-            font-weight: bold;
-        }
-        
-        strong, b
-        {
-            color: Blue;
-        }
-        
-        p
-        {
-            margin-left: 2em;
-        }
-    </style>
+    <link rel="Stylesheet" href="../../Content/esphelp.css" />
+    <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
 </head>
 <body>
     <div style="width: 100%">
@@ -38,25 +15,25 @@
         <h2>
             Function:</h2>
         <p>
-            Call this API before <b>system_deep_sleep</b> to set what the chip will do when next deep-sleep wake up. The option is 1 by default</p>
+            Call this API before <b>system_deep_sleep</b> to set what the chip will do when
+            next deep-sleep wake up. The option is 1 by default</p>
         <h2>
             Prototype:</h2>
-        
-    <strong>bool system_deep_sleep_set_option(uint8 option)</strong>
+        <strong>bool system_deep_sleep_set_option(uint8 option)</strong>
         <h2>
             Parameters:</h2>
-        <p><b>uint8 option</b> :<br/>
-            &nbsp;&nbsp;&nbsp; <strong>0</strong> : Radio calibration after deep-sleep wake up depends on
-            esp_init_data_default.bin（0〜～127byte）byte 108.<br />
-            &nbsp;&nbsp;&nbsp; <strong>1</strong> : Radio calibration is done after deep-sleep wake up; this increases
-            the current consumption.<br />
-            &nbsp;&nbsp;&nbsp; <strong>2</strong> : No radio calibration after deep-sleep wake up; this reduces the
-            current consumption.<br />
-            <strong>&nbsp;&nbsp;&nbsp; 4</strong> : Disable RF after deep-sleep wake up, just like modem sleep; this has
-            the least current consumption; the device is not able to transmit or receive
-            data after wake up.
+        <p>
+            <b>uint8 option</b> :<br />
+            &nbsp;&nbsp;&nbsp; <strong>0</strong> : Radio calibration after deep-sleep wake
+            up depends on esp_init_data_default.bin（0〜～127byte）byte 108.<br />
+            &nbsp;&nbsp;&nbsp; <strong>1</strong> : Radio calibration is done after deep-sleep
+            wake up; this increases the current consumption.<br />
+            &nbsp;&nbsp;&nbsp; <strong>2</strong> : No radio calibration after deep-sleep wake
+            up; this reduces the current consumption.<br />
+            <strong>&nbsp;&nbsp;&nbsp; 4</strong> : Disable RF after deep-sleep wake up, just
+            like modem sleep; this has the least current consumption; the device is not able
+            to transmit or receive data after wake up.
         </p>
-
         <h2>
             Return:</h2>
         <pre>   true : succeed
@@ -66,7 +43,6 @@
             Include:</h2>
         <p>
             osapi.h</p>
-       
     </div>
 </body>
 </html>

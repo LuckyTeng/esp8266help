@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+    <head>
+        <title>ESP8266 Help</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="Stylesheet" href="../../Content/esphelp.css" />
+        <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
+        <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    </head>
+<body>
+    <div class="container">
+        <h1>
+            system_rtc_mem_write</h1>
+        <h2>
+            Function:</h2>
+        <p>
+            During deep sleep, only RTC still working, so maybe we need to save some
+            user data in RTC memory. Only user data area can be used by user.</p>
+        <p>|&lt;--------system data---------&gt;|&lt;-----------------user data---------------&gt;|<br />
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;256 bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;512 bytes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+        </p>
+        <h2>
+            Prototype:</h2>
+        <pre>
+    <strong>bool system_rtc_mem_write (
+        uint32 des_addr,
+        void * src_addr,
+        uint32 save_size
+        )</strong>
+</pre>
+        <h2>
+            Parameters:</h2>
+        <p>
+            <b>uint32 des_addr</b> : destination address (block number) in RTC memory,
+            <b>des_addr >=64</b><br />
+            <b>void * src_addr</b> : data pointer.<br />
+            <b>uint32 save_size</b> : data length ( byte)
+        </p>
+        <h2>
+            Return:</h2>
+        <p>
+            true: succeed<br />
+            false: fail</p>
+        <h2>
+            Include:</h2>
+        <p>
+            osapi.h</p>
+        <h2>
+            Note:</h2>
+        <p>RTC memory is 4 bytes aligned for read and write operations. Parameter
+des_addr means block number(4 bytes per block). So, if we want to save some
+data at the beginning of user data area, <b>des_addr</b> will be 256/4 = 64,
+            <b>save_size</b> will be data length.</p>
+        <h2>
+            Example:</h2>
+        <p>
+            <b>This is a example.</b></p>
+    </div>
+</body>
+</html>

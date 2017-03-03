@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
-<head>
-    <title>ESP8266 Help</title>
+    <head>
+        <title>ESP8266 Help</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,37 +9,39 @@
         <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
         <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
-</head>
+    </head>
 <body>
-    <div style="width: 100%">
+    <div class="container">
         <h1>
-            system_phy_set_tpw_via_vdd33</h1>
+            system_update_cpu_freq</h1>
         <h2>
             Function:</h2>
         <p>
-            Adjust RF TX Power according to VDD33, unit : 1/1024 V</p>
+            Set CPU frequency. Default is 80MHz.</p>
         <h2>
             Prototype:</h2>
         <pre>
-    <strong>void system_phy_set_tpw_via_vdd33(uint16 vdd33)</strong>
+    <strong>bool system_update_cpu_freq(uint8 freq)</strong>
 </pre>
         <h2>
-            Return:</h2>
+            Parameters:</h2>
         <p>
-            none</p>
+            uint8 freq : CPU frequency<br />
+            #define SYS_CPU_80MHz 80<br />
+            #define SYS_CPU_160MHz 160<br /></p>
+        <h2>Return:</h2>
+        <p>
+            true : succeed<br />
+            false: fail</p>
         <h2>
             Include:</h2>
         <p>
             osapi.h</p>
         <h2>
             Note:</h2>
-        <p>When TOUT pin is suspended, VDD33 can be got by system_get_vdd33;<br>
-When wire TOUT pin to external circuitry, system_get_vdd33 can not be used.
-        </p>
-        <h2>
-            Example:</h2>
-        <p>
-            <b>This is a example.</b></p>
+        <p>System bus frequency is 80MHz, will not be affected by CPU frequency. The
+frequency of UART, SPI, or other peripheral devices, are divided from system
+bus frequency, so they will not be affected by CPU frequency either.</p>
     </div>
 </body>
 </html>

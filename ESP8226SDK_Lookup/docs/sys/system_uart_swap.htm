@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
-<head>
-    <title>ESP8266 Help</title>
+    <head>
+        <title>ESP8266 Help</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,20 +9,26 @@
         <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
         <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
-</head>
+    </head>
 <body>
-    <div style="width: 100%">
+    <div class="container">
         <h1>
-            system_phy_set_tpw_via_vdd33</h1>
+            system_uart_swap</h1>
         <h2>
             Function:</h2>
         <p>
-            Adjust RF TX Power according to VDD33, unit : 1/1024 V</p>
+            UART0 swap. Use MTCK as UART0 RX, MTDO as UART0 TX, so ROM log will not
+output from this new UART0. We also need to use MTDO (U0CTS) and MTCK
+(U0RTS) as UART0 in hardware.</p>
         <h2>
             Prototype:</h2>
         <pre>
-    <strong>void system_phy_set_tpw_via_vdd33(uint16 vdd33)</strong>
+    <strong>void system_uart_swap (void)</strong>
 </pre>
+        <h2>
+            Parameters:</h2>
+        <p>
+            null</p>
         <h2>
             Return:</h2>
         <p>
@@ -31,15 +37,6 @@
             Include:</h2>
         <p>
             osapi.h</p>
-        <h2>
-            Note:</h2>
-        <p>When TOUT pin is suspended, VDD33 can be got by system_get_vdd33;<br>
-When wire TOUT pin to external circuitry, system_get_vdd33 can not be used.
-        </p>
-        <h2>
-            Example:</h2>
-        <p>
-            <b>This is a example.</b></p>
     </div>
 </body>
 </html>
