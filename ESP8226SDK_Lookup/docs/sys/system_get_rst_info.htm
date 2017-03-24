@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+    <head>
+        <title>ESP8266 Help</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="Stylesheet" href="../../Content/esphelp.css" />
+        <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
+        <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    </head>
+<body>
+    <div class="container">
+        <h1>
+            system_get_rst_info</h1>
+        <h2>
+            Function:</h2>
+        <p>
+            Get information about current startup.</p>
+        <h2>Structure:</h2>
+        <pre>
+    <b>enum rst_reason {
+        REANSON_DEFAULT_RST = 0, // normal startup by power on
+        REANSON_WDT_RST = 1, // hardware watch dog reset
+        // exception reset, GPIO status won’t change
+        REANSON_EXCEPTION_RST = 2,
+        // software watch dog reset, GPIO status won’t change
+        REANSON_SOFT_WDT_RST = 3,
+        // software restart ,system_restart , GPIO status won’t change
+        REANSON_SOFT_RESTART = 4,
+        REANSON_DEEP_SLEEP_AWAKE = 5, // wake up from deep-sleep
+        REANSON_EXT_SYS_RST = 6, // external system reset
+    };
+    struct rst_info {   
+        uint32 reason; // enum rst_reason
+        uint32 exccause;
+        uint32 epc1; // the address that error occurred
+        uint32 epc2;
+        uint32 epc3;
+        uint32 excvaddr;
+        uint32 depc;
+  };</b>
+</pre>
+        <h2>
+            Prototype:</h2>
+        <pre>
+    <b>struct rst_info* system_get_rst_info(void)</b>
+</pre>
+        <h2>
+            Parameters:</h2>
+        <p>
+            none</p>
+        <h2>
+            Return:</h2>
+        <p>
+            Information about startup.</p>
+        <h2>
+            Include:</h2>
+        <p>
+            osapi.h</p>
+    </div>
+</body>
+</html>

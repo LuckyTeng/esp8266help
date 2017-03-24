@@ -13,17 +13,17 @@
 <body>
     <div class="container">
         <h1>
-            function_name</h1>
+            system_soft_wdt_restart</h1>
         <h2>
             Function:</h2>
         <p>
-            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
-            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
-            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+            Restart software watchdog</p>
+        <h2>Note:</h2>
+        <p>This API can only be called if software watchdog is stopped <b>(system_soft_wdt_stop)</b></p>
         <h2>
             Prototype:</h2>
         <pre>
-    <b>void system_restore(void)</b>
+    <strong>void system_soft_wdt_restart(void)</strong>
 </pre>
         <h2>
             Parameters:</h2>
@@ -37,17 +37,6 @@
             Include:</h2>
         <p>
             osapi.h</p>
-        <h2>
-            Remark:</h2>
-        <ul>
-            <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked
-                repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
-            <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
-        </ul>
-        <h2>
-            Example:</h2>
-        <p>
-            <b>This is a example.</b></p>
     </div>
 </body>
 </html>

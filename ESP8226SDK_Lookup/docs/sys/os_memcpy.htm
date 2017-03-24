@@ -13,22 +13,22 @@
 <body>
     <div class="container">
         <h1>
-            function_name</h1>
+            os_memcpy</h1>
         <h2>
             Function:</h2>
         <p>
-            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
-            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
-            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+            copy memory</p>
         <h2>
             Prototype:</h2>
         <pre>
-    <b>void system_restore(void)</b>
+    <strong>os_memcpy(void *des, void *src, size_t n)</strong>
 </pre>
         <h2>
             Parameters:</h2>
         <p>
-            null</p>
+            <b>void *des</b> - pointer of destination<br />
+            <b>void *src</b> - pointer of source<br />
+            <b>size_t n</b> - memory size</p>
         <h2>
             Return:</h2>
         <p>
@@ -38,16 +38,10 @@
         <p>
             osapi.h</p>
         <h2>
-            Remark:</h2>
-        <ul>
-            <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked
-                repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
-            <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
-        </ul>
-        <h2>
             Example:</h2>
         <p>
-            <b>This is a example.</b></p>
+            <b>uint8 buffer[4] = {0};</b><br />
+            <b>os_memcpy(buffer, “abcd”, 4);</b></p>
     </div>
 </body>
 </html>

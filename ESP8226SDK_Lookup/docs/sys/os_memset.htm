@@ -13,22 +13,22 @@
 <body>
     <div class="container">
         <h1>
-            function_name</h1>
+            os_memset</h1>
         <h2>
             Function:</h2>
         <p>
-            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
-            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
-            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+            Set value of memory</p>
         <h2>
             Prototype:</h2>
         <pre>
-    <b>void system_restore(void)</b>
+    <b>os_memset(void *s, int ch, size_t n)</b>
 </pre>
         <h2>
             Parameters:</h2>
         <p>
-            null</p>
+            <b>void *s</b> - pointer of memory<br />
+            <b>int ch</b> - set value<br />
+            <b>size_t n</b> - size</p>
         <h2>
             Return:</h2>
         <p>
@@ -40,9 +40,8 @@
         <h2>
             Remark:</h2>
         <ul>
-            <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked
-                repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
-            <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
+            <li><b>uint8 buffer[32];</b></li>
+            <li><b>os_memset(buffer, 0, sizeof(buffer));</b></li>
         </ul>
         <h2>
             Example:</h2>

@@ -151,19 +151,11 @@ namespace ESP8226SDK_Lookup
 
         private void cbGrp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-        }
-
-        private void cbGrp_TextUpdate(object sender, EventArgs e)
-        {
-            
         }
 
         private void cbGrp_TextChanged(object sender, EventArgs e)
         {
             updateList();
         }
-
-
     }
 }

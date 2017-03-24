@@ -136,6 +136,24 @@
     <keyword name="gpio_pin_intr_state_set" group="gpio"></keyword>
     <keyword name="gpio interrupt handler" group="gpio"></keyword>
 
+    <!--JSON-->
+    <keyword name="jsonparse_setup" group="json"></keyword>
+    <keyword name="jsonparse_next" group="json"></keyword>
+    <keyword name="jsonparse_copy_value" group="json"></keyword>
+    <keyword name="jsonparse_get_value_as_int" group="json"></keyword>
+    <keyword name="jsonparse_get_value_as_long" group="json"></keyword>
+    <keyword name="jsonparse_get_len" group="json"></keyword>
+    <keyword name="jsonparse_get_value_as_type" group="json"></keyword>
+    <keyword name="jsonparse_strcmp_value" group="json"></keyword>
+    <keyword name="jsontree_set_up" group="json"></keyword>
+    <keyword name="jsontree_reset" group="json"></keyword>
+    <keyword name="jsontree_path_name" group="json"></keyword>
+    <keyword name="jsontree_write_int" group="json"></keyword>
+    <keyword name="jsontree_write_int_array" group="json"></keyword>
+    <keyword name="jsontree_write_string" group="json"></keyword>
+    <keyword name="jsontree_print_next" group="json"></keyword>
+    <keyword name="jsontree_find_next" group="json"></keyword>
+    
     <groups>
         <group>soft_timer</group>
         <group>hw_timer</group>
@@ -143,5 +161,6 @@
         <group>spi</group>
         <group>wifi</group>
         <group>gpio</group>
+        <group>json</group>
     </groups>
 </esp8266doc>

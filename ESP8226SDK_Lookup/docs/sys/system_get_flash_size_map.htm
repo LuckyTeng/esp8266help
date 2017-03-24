@@ -13,41 +13,43 @@
 <body>
     <div class="container">
         <h1>
-            function_name</h1>
+            system_get_flash_size_map</h1>
         <h2>
             Function:</h2>
         <p>
-            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
-            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
-            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+            Get current flash size and flash map.<br>
+                                                 Flash map depends on the selection when compiling, more details in document
+                                                 “2A-ESP8266__IOT_SDK_User_Manual”
+        </p>
+        <h2>Structure:</h2>
+        <pre>
+    <b>enum flash_size_map {
+        FLASH_SIZE_4M_MAP_256_256 = 0,
+        FLASH_SIZE_2M,
+        FLASH_SIZE_8M_MAP_512_512,
+        FLASH_SIZE_16M_MAP_512_512,
+        FLASH_SIZE_32M_MAP_512_512,
+        FLASH_SIZE_16M_MAP_1024_1024,
+        FLASH_SIZE_32M_MAP_1024_1024
+    };</b>
+</pre>
         <h2>
             Prototype:</h2>
         <pre>
-    <b>void system_restore(void)</b>
+    <strong>enum flash_size_map system_get_flash_size_map(void)</strong>
 </pre>
         <h2>
             Parameters:</h2>
         <p>
-            null</p>
+            none</p>
         <h2>
             Return:</h2>
         <p>
-            none</p>
+            flash map</p>
         <h2>
             Include:</h2>
         <p>
             osapi.h</p>
-        <h2>
-            Remark:</h2>
-        <ul>
-            <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked
-                repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
-            <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
-        </ul>
-        <h2>
-            Example:</h2>
-        <p>
-            <b>This is a example.</b></p>
     </div>
 </body>
 </html>
