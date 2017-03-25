@@ -7,34 +7,48 @@
     <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
     <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function copyToClipboard(text) {
+            window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>
-            function_name</h1>
+            keyword</h1>
         <h2>
             Function:</h2>
-        <p>
-            Reset to default settings of following APIs ：<b>wifi_station_set_auto_connect</b>,
-            <b>wifi_set_phy_mode</b>, <b>wifi_softap_set_config</b> related, <b>wifi_station_set_config</b>
-            related, <b>wifi_set_opmode</b>, and APs information recorded by <b>#define AP_CACHE</b></p>
+        <div>
+            <h4>FunctionDescription</h4></div>
+        <h2>
+            Note:
+        </h2>
+        <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+        </ul>
         <h2>
             Prototype:</h2>
         <pre>
-    <b>void system_restore(void)</b>
+    <b><a id="proto" onclick="copyToClipboard(document.getElementById('proto').innerHTML)">prototypeDescription</a></b>
 </pre>
         <h2>
             Parameters:</h2>
-        <p>
-            null</p>
+        <div>
+            <h4>null</h4></div>
         <h2>
             Return:</h2>
-        <p>
-            none</p>
+        <ul class="list-unstyled">
+            <li><h4>true: succeed</h4></li>
+            <li><h4>fale: fail</h4></li>
+        </ul>
         <h2>
             Include:</h2>
-        <p>
-            osapi.h</p>
+        <div>
+            <h4>user_interface.h</h4></div>
         <h2>
             Remark:</h2>
         <ul>
@@ -42,16 +56,10 @@
                 repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
             <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
         </ul>
-        <h2>
-            Example:</h2>
-        <p>
-            <b>This is a example.</b></p>
         <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
-            Simple collapsible</button>
+            Example:</button>
         <div id="demo" class="collapse in">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            This is a example.
         </div>
     </div>
 </body>

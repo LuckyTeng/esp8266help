@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <title>ESP8266 Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="../../Content/esphelp.css" />
+    <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function copyToClipboard(text) {
+            window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            wifi_get_opmode_default</h1>
+
+        <h2>
+            Function:</h2>
+        <div>
+            <h4>get WiFi operating mode that saved in flash</h4></div>
+
+        <h2>
+            Prototype:</h2>
+        <pre>
+    <b><a id="proto" onclick="copyToClipboard(document.getElementById('proto').innerHTML)">uint8 wifi_get_opmode_default (void)</a></b>
+</pre>
+        <h2>
+            Parameters:</h2>
+        <div>
+            <h4>null</h4></div>
+        <h2>
+            Return:</h2>
+        <ul class="list-unstyled">
+            <li>
+                <h4>
+                    WiFi working modes:</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <h4>
+                            0x01: station mode</h4>
+                    </li>
+                    <li>
+                        <h4>
+                            0x02: soft-AP mode</h4>
+                    </li>
+                    <li>
+                        <h4>
+                            0x03: station+soft-AP mode</h4>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>
+            Include:</h2>
+        <div>
+            <h4>user_interface.h</h4></div>
+    </div>
+</body>
+</html>
