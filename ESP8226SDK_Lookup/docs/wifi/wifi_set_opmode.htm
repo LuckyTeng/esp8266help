@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <title>ESP8266 Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="../../Content/esphelp.css" />
+    <link rel="Stylesheet" href="../../Content/bootstrap.min.css" />
+    <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function copyToClipboard(text) {
+            window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            wifi_set_opmode</h1>
+        <h2>
+            Function:</h2>
+        <div>
+            <h4>Sets WiFi working mode as station, soft-AP or station+soft-AP, and save it
+to flash. Default is soft-AP mode.</h4></div>
+        <h2>
+            Note:
+        </h2>
+        <ul>
+            <li>Versions before esp_iot_sdk_v0.9.2, need to call <b>system_restart()</b> after this
+api; after esp_iot_sdk_v0.9.2, need not to restart.</li>
+            <li>This configuration will be saved in flash system parameter area if changed.</li>
+        </ul>
+        <h2>
+            Prototype:</h2>
+        <pre>
+    <b><a id="proto" onclick="copyToClipboard(document.getElementById('proto').innerHTML)">bool wifi_set_opmode (uint8 opmode)</a></b>
+</pre>
+        <h2>
+            Parameters:</h2>
+        <div>
+            <h4><b>uint8 opmode</b>: WiFi operating modes:</h4>
+            <ul class="list-unstyled">
+                <li>
+                    0x01: station mode
+                </li>
+                <li>
+                    0x02: soft-AP mode
+                </li>
+                <li>
+                    0x03: station+soft-AP
+                </li>
+            </ul></div>
+        <h2>
+            Return:</h2>
+        <ul class="list-unstyled">
+            <li><h4>true: succeed</h4></li>
+            <li><h4>fale: fail</h4></li>
+        </ul>
+        <h2>
+            Include:</h2>
+        <div>
+            <h4>user_interface.h</h4></div>
+        <h2>
+            Remark:</h2>
+        <ul>
+            <li>For the same timer, <b>os_timer_arm</b> (or <b>os_timer_arm_us</b>) cannot be invoked
+                repeatedly. <b>os_timer_disarm</b> should be invoked first.</li>
+            <li><b>os_timer_setfn</b> can only be invoked when the timer is not enabled,</li>
+        </ul>
+    </div>
+</body>
+</html>
